@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Déconvolution de signaux : des méthodes variationnelles aux réseaux déroulés
+# Déconvolution de signaux : des méthodes lineaires, variationnelles aux réseaux déroulés
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2024a%2B-orange) ![Licence](https://img.shields.io/badge/licence-MIT-blue)
 
