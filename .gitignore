@@ -1,0 +1,18 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+slprj/
+*.autosave
+*.slxc
+octave-workspace
+
+# Modèles entraînés (régénérés automatiquement, souvent volumineux)
+models/*.mat
+
+# Résultats intermédiaires (les figures .png et tableaux .csv sont conservés)
+results/*.mat
+
+# Système
+.DS_Store
+Thumbs.db
