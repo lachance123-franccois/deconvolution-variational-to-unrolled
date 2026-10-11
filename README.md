@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Déconvolution de signaux : des méthodes variationnelles aux réseaux déroulés
 
-![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-orange) ![Licence](https://img.shields.io/badge/licence-MIT-blue)
+![MATLAB](https://img.shields.io/badge/MATLAB-R2024a%2B-orange) ![Licence](https://img.shields.io/badge/licence-MIT-blue)
 
 Projet personnel réalisé dans le cadre de mon Master Signal, Image et Apprentissage Automatique. L'objectif est de comparer, sur un problème simple et bien contrôlé, plusieurs familles de méthodes pour les **problèmes inverses** : retrouver un signal $x$ à partir d'une observation floutée et bruitée.
 
