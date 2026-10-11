@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Déconvolution de signaux : des méthodes variationnelles aux réseaux déroulés
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-orange) ![Licence](https://img.shields.io/badge/licence-MIT-blue)
@@ -299,3 +300,6 @@ Au premier lancement des expériences 4 à 6, les réseaux sont entraînés puis
 ## Licence
 
 MIT, voir [LICENSE](LICENSE).
+=======
+fjfc
+>>>>>>> 9f7defc6d59df53f782df52fd2460e8eacdb4b51
