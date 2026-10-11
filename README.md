@@ -239,11 +239,13 @@ C'est un **succès partiel**. L'a priori $\ell_0$ fait mieux que la TV, dont le 
 
 ## 7. Pistes d'amélioration
 
-- **PnP** : prolongement périodique du signal avant le CNN (cohérent avec le modèle), débruiteur conditionné par le niveau de bruit (type FFDNet), $\rho$ croissant, et arrêt anticipé ;
-- **réseau déroulé** : entraînement sur plusieurs noyaux et niveaux de bruit pour améliorer la robustesse, ou contrainte sur les pas pour conserver la convergence ;
-- **déconvolution aveugle** : continuation plus longue, critère d'arrêt adaptatif, choix de $\lambda$ sans connaître le noyau ;
-- conditions aux bords réfléchies (DCT) ou simulation par convolution linéaire pour éviter le crime inverse ;
-- passage aux images 2D, bruit de Poisson, approche bayésienne avec quantification de l'incertitude.
+Ce travail laisse plusieurs pistes que nous n’avons pas eu le temps d’explorer, et qu’il serait intéressant d’étudier :
+
+- **Pour la méthode Plug-and-Play**, on pourrait essayer de prolonger le signal de façon périodique avant de l’envoyer au CNN, pour rester cohérent avec le modèle direct utilisé. Il serait aussi intéressant de tester un débruiteur qui prend en entrée le niveau de bruit (dans l’esprit de FFDNet), de faire augmenter progressivement $\rho$ au fil des itérations, et d’arrêter l’algorithme plus tôt pour éviter qu’il ne se dégrade.
+-**Pour le réseau déroulé**, l’entraîner sur plusieurs noyaux et plusieurs niveaux de bruit pourrait le rendre plus robuste. Une autre idée serait d’imposer des contraintes sur les pas appris, afin de garder les garanties de convergence de l’algorithme d’origine.
+Pour la déconvolution aveugle, nos résultats suggèrent qu’une phase de continuation plus longue et un critère d’arrêt adaptatif pourraient améliorer l’estimation. Le choix de $\lambda$ sans connaître le noyau reste une question que nous n’avons pas réussi à traiter de façon satisfaisante.
+-**Concernant les bords**, nous avons utilisé des conditions périodiques, ce qui simplifie les calculs mais rend nos résultats probablement un peu optimistes (crime inverse). Il faudrait vérifier ce qui se passe avec des conditions réfléchies (diagonalisées par la DCT), ou en simulant les données par une convolution linéaire.
+À plus long terme, il serait naturel d’étendre ce travail aux images 2D, de considérer un bruit de Poisson (plus réaliste pour certaines applications), ou encore d’adopter une approche bayésienne, qui permettrait d’estimer l’incertitude sur la reconstruction.
 
 ## 8. Utilisation
 
