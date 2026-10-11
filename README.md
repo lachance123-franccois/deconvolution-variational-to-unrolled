@@ -297,9 +297,4 @@ Au premier lancement des expériences 4 à 6, les réseaux sont entraînés puis
 - V. Monga, Y. Li, Y. Eldar, « Algorithm unrolling: interpretable, efficient deep learning for signal and image processing », *IEEE Signal Process. Mag.*, 2021.
 - J. Duchi et al., « Efficient projections onto the l1-ball for learning in high dimensions », *ICML*, 2008.
 
-## Licence
 
-MIT, voir [LICENSE](LICENSE).
-=======
-fjfc
->>>>>>> 9f7defc6d59df53f782df52fd2460e8eacdb4b51
