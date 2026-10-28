@@ -1,5 +1,4 @@
 function n = count_learnables(net)
-%CNombre de paramètres appris d'un réseau (SeriesNetwork/DAGNetwork).
 n = 0;
 props = {'Weights', 'Bias', 'Offset', 'Scale'};
 for i = 1:numel(net.Layers)

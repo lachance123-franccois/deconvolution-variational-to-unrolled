@@ -1,6 +1,4 @@
 function X = unrolled_cp_forward(params, Y, Hm, S)
-
-
 K = size(params.W, 2);
 x = Hm' * Y;
 xbar = x;

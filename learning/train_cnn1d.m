@@ -1,7 +1,4 @@
 function [net, tinfo] = train_cnn1d(Xin, Xout, Xin_val, Xout_val, opts)
-%Entraîne un CNN 1D (build_cnn1d) pour apprendre Xin -> Xout.
-%   Données : matrices N x M (une colonne par exemple).
-%   opts : depth, filters, fsize, epochs, batch, lr
 N = size(Xin, 1);
 depth  = opt_get(opts, 'depth', 12);
 nf     = opt_get(opts, 'filters', 32);

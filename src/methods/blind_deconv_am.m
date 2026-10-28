@@ -1,5 +1,4 @@
 function [x, h, info] = blind_deconv_am(y, L, opts)
-%BLIND_DECONV_AM Déconvolution aveugle par minimisation alternée.
 %   Phase 1 - estimation du noyau, en alternant :
 %     - étape x : a priori parcimonieux sur le gradient (L0 par défaut,
 %                 ou TV) avec le noyau courant
