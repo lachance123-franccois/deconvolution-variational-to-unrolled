@@ -1,9 +1,4 @@
 function x = gen_signal(type, N, opts)
-%Generation d'un signal de test (vecteur colonne N x 1).
-%   type : 'piecewise'        constant par morceaux (sauts aléatoires)
-%          'piecewise_smooth' constant par morceaux + composante sinusoïdale
-%          'audio'            extrait normalisé du signal handel.mat (MATLAB)
-%   opts.min_jumps, opts.max_jumps : nombre de sauts (défaut 3 à 10).
 if nargin < 3, opts = struct(); end
 switch lower(type)
     case 'piecewise'

@@ -1,9 +1,4 @@
 function h = make_kernel(type, param, L)
-%Réponse impulsionnelle centrée, de longueur impaire L, de somme 1.
-%   type : 'gaussian'    param = écart-type (échantillons)
-%          'uniform'     param = largeur (moyenne glissante)
-%          'exponential' param = constante de temps (noyau causal, asymétrique)
-%          'delta'       identité (pas de flou)
 if nargin < 3 || isempty(L), L = 2 * ceil(3 * param) + 1; end
 if mod(L, 2) == 0, L = L + 1; end 
 t = (-(L - 1) / 2:(L - 1) / 2)';

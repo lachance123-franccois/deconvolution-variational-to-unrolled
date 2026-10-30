@@ -21,17 +21,3 @@ for k = 1:K
 end
 X = x;
 end
-%Passe avant du Chambolle-Pock déroulé.
-%   Problème sous-jacent :  min_x 1/2||Hx - y||^2 + lambda ||Dx||_1
-%   écrit avec K = [H ; D] (aucune inversion de matrice) :
-%     p    <- (p + sigma (H xbar - y)) / (1 + sigma)     prox de f1*
-%     q    <- proj_[-lambda, lambda](q + sigma D xbar)   prox de f2*
-%     x+   <- x - tau (H'p + D'q)
-%     xbar <- 2 x+ - x
-%   Chaque itération = une couche avec ses propres (tau, sigma, lambda, D).
-%
-%   params : structure (numérique ou dlarray), cf. unrolled_cp_init
-%   Y      : observations N x B
-%   Hm     : matrice de convolution N x N (conv_matrix)
-%   S      : matrices de décalage (shift_matrices)
-%   Compatible dlarray : seules des opérations différentiables sont utilisées.

@@ -1,8 +1,4 @@
 function [params, hist] = train_unrolled_cp(Xtr, Ytr, Hm, Xval, Yval, opts)
-%TRAIN_UNROLLED_CP Apprentissage supervisé du Chambolle-Pock déroulé.
-%   Boucle d'entraînement personnalisée (dlarray, dlgradient, Adam).
-%   opts : layers, epochs, batch, lr, lam0
-%   hist.train : perte par itération ; hist.val : SNR moyen (dB) par époque
 K      = opt_get(opts, 'layers', 15);
 epochs = opt_get(opts, 'epochs', 40);
 bs     = opt_get(opts, 'batch', 32);
@@ -20,7 +16,7 @@ hist.train = zeros(epochs * nb, 1);
 hist.val = zeros(epochs, 1);
 
 for ep = 1:epochs
-    lr = lr0 * 0.5^floor(3 * (ep - 1) / epochs);   % 3 paliers de décroissance
+    lr = lr0 * 0.5^floor(3 * (ep - 1) / epochs);  
     idx = randperm(M);
     for b = 1:nb
         it = it + 1;
@@ -31,8 +27,6 @@ for ep = 1:epochs
     end
     pv = structfun(@(v) double(extractdata(v)), p, 'UniformOutput', false);
     hist.val(ep) = mean(snr_db(Xval, unrolled_cp_forward(pv, Yval, Hm, S)));
-    fprintf('  [CP déroulé] époque %2d/%d  perte %.3e  SNR val %.2f dB\n', ...
-        ep, epochs, mean(hist.train(it - nb + 1:it)), hist.val(ep));
 end
 params = structfun(@(v) double(extractdata(v)), p, 'UniformOutput', false);
 end

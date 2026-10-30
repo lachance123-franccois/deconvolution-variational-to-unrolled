@@ -1,5 +1,4 @@
 function w = proj_simplex(v)
-    %PROJ_SIMPLEX fait la Projection euclidienne sur le simplexe {w >= 0, sum(w) = 1}.
     v = v(:);
     n = numel(v);
     u = sort(v, 'descend');

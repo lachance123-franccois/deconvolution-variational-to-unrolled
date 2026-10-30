@@ -1,7 +1,4 @@
 function cfg = default_config()
-% Ce sont des Parametres communs a toutes les experiences.
-%   Modifier ce fichier (ou la structure renvoyée) pour changer le noyau,
-%   le niveau de bruit, la taille des jeux de donnees, etc.
 
 cfg.root        = fileparts(fileparts(fileparts(mfilename('fullpath'))));
 cfg.results_dir = fullfile(cfg.root, 'results');
